@@ -4,8 +4,14 @@ public class Main {
         System.out.println("Welcome to CareerTrack");
         System.out.println();
 
-        JobApplication app1 = new JobApplication("Microsoft", "Software Engineer Intern", "Applied");
+        ApplicationManager manager = new ApplicationManager();
 
-        app1.displayApplication();
+        manager.addApplication("Microsoft", "Software Engineer Intern");
+        manager.addApplication("Amazon", "SDE Intern");
+        manager.addApplication("Google", "Backend Intern");
+
+        manager.updateStatus(1, ApplicationsStatus.INTERVIEW);
+        // manager.deleteApplication(2);
+        manager.DisplayApplications();
     }
 }
